@@ -5,6 +5,10 @@ This project is an implementation of an alternative to Google Lens' feature imag
 
 Image similarity search works by extracting embeddings/features from images and comparing them in a high-dimensional feature space. The closer the features of two images are in this space, the more similar they are considered to be. Process leverages deep learning models and distance metrics like cosine similarity or Euclidean distance to find similarity.
 
+## **How to Run**
+All the approaches are consolidated in `combined_approaches.ipynb`, which can be executed directly. I've used Google Colab for my experiments.
+
+
 ## **Implemented Approaches**
 1. **ResNet50**:
    - Pre-trained Resnet50 convolutional neural network used to extract embeddings from images.
@@ -38,12 +42,12 @@ Example: In an e-commerce platform, if a user searches for "red dresses," and th
 
 # Results 
 
-| **Approach**               | **Evaluation Metrics (Precision, Recall, Retrieval Accuracy)**  | **Computational Efficiency**          | **Scalability**                | **Comment**                                         |
+| **Approach**               | **Evaluation Metrics (Precision, Recall, Retrieval Accuracy)**  | **Computational Efficiency**          | **Scalability & Infrastruce Required**                                        |  **Comment** |
 |-----------------------------|---------------|-------------------------|--------------------------------|-----------------------------------------------------|
-| ResNet50               | High          | Very High               | High                | Good with low range dataset. Bad in capturing gloabl context. No need for training, use finetune on one dataset will work or without finetuning as well          |
-| Autoencoder                   | Moderate           | Moderate                | High            | Needs proper training on dataset. Captures global and local features effectively.     |
-| Siamese Network                       | Moderate                   | Low                | Moderate  | Needs proper training on dataset.                              |
-| CLIP           | Very High     | Moderate         | High                       | Very good in almost any type of data. Non need for training or fine tuning   |
+| ResNet50               | High          | Very High               | High  with low-end GPUs | Good with low range dataset. Bad in capturing gloabl context. No need for training, use finetune on one dataset will work or without finetuning as well          | 
+| Autoencoder                   | Moderate           | Moderate                | High with medium-end GPUs | Needs proper training on dataset. Captures global and local features effectively.     |
+| Siamese Network                       | Moderate                   | Low                | High with medium-end GPUs | Needs proper training on dataset.                              |
+| CLIP           | Very High     | Moderate         | High  with high-end GPUs  | Very good in almost any type of data. Non need for training or fine tuning   |
 
 
 # Insights
@@ -77,10 +81,8 @@ Recommended Model: CLIP
 
 **Why?** - Because it offers the best balance between scalability and performance, with high retrieval accuracy across diverse datasets. Its ability to work without retraining or fine-tuning makes it ideal for dynamic, real-world applications where new data is frequently added.
 
-**Use Case** - Ideal for systems like Google Lens or large-scale e-commerce platforms with varied and continuously changing image catalogs.
+Ideal for systems like Google Lens or large-scale e-commerce platforms with varied and continuously changing image catalogs.
 
-## **How to Run**
-All approaches are in `combined_approaches.ipynb` only. It can be directly run. I've used google colab for my experiments.
 
 ## **References**
 - Deep Residual Learning for Image Recognition. arXiv:1512.03385
