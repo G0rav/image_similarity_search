@@ -39,6 +39,10 @@ In real-time systems (like Google Lens), precision may be prioritized to ensure 
 
 Example: In an e-commerce platform, if a user searches for "red dresses," and the system retrieves 10 images of which 8 are truly red dresses, the precision is 80%. A higher precision ensures that users see mostly relevant results, improving their experience.
 
+# Efficient similarity search tools
+
+- Faiss - Developed by Facebook, written in c++. It is a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. 
+- Some good vector database.
 
 # Results 
 
