@@ -5,6 +5,13 @@ This project is an implementation of an alternative to Google Lens' feature imag
 
 Image similarity search works by extracting embeddings/features from images and comparing them in a high-dimensional feature space. The closer the features of two images are in this space, the more similar they are considered to be. Process leverages deep learning models and distance metrics like cosine similarity or Euclidean distance to find similarity.
 
+# Updates - 5 Jan 2025
+- Added Fine-tuning for ResNet50 and CLIP models
+- Added test scripts for all 4 methods
+- Added a separate test script for the CLIP model, it can run independently
+- Evaluation code for all methods including CLIP
+- Added all comments and docstrings
+
 ## **How to Run**
 All the approaches are consolidated in `combined_approaches.ipynb`, which can be executed directly. I've used Google Colab for my experiments.
 
